@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="overlay">
+        <div id="enter-text">Click to Enter</div>
+    </div>
+
+    <div id="bio-content">
+        <video autoplay muted loop id="background-video">
+            <source src="vid.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Centered Card with Blur Effect -->
+        <div class="center-content">
+            <div id="card">
+                <img class="pp" src="pp.png">
+                <div class="name">MariX</div>
+                <div class="desc">marix.btw</div>
+                <div class="flags">
+                    <img class="en" src="https://imgs.search.brave.com/-0TRy5HOZDpPVgWnY55PfNuwEnom6jXRZy8e8UC8Bk4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAwLzgwLzkzLzEz/LzM2MF9GXzgwOTMx/MzYyX2hjN012a2dr/alRVak9sbkNYSmpP/QVNFTnVhWVROb3h2/LmpwZw">
+                    <img class="fr" src="https://imgs.search.brave.com/dz31vmU_L48lY-GPXmhwTVE4m0NrCQtBmi8BxqfE4pE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvMTQ1/NDA4NzYyNy9waG90/by9mcmFuY2UtbmF0/aW9uYWwtZmxhZy5q/cGc_cz02MTJ4NjEy/Jnc9MCZrPTIwJmM9/MDhzdEQ1WUVTT29C/WEpuTzR1b05Zejlw/bThhUHRvdEpua19i/aXkzS0gxRT0">
+                    <img class="nl" src="https://imgs.search.brave.com/P-TMuqt7CKEqSEnsKPn0FgtoUhj38sogiP7sedbNrxE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YnJpdGFubmljYS5j/b20vODIvMjk4Mi0w/MDQtODRBMkE3MUUv/ZmxhZy1wcm90b3R5/cGUtTmV0aGVybGFu/ZHMtY291bnRyaWVz/LUV1cm9wZWFuLWZs/YWdzLmpwZw">
+                </div>
+
+                <!-- New: Time Display -->
+
+                <!-- New: Social Media Links -->
+                <div id="social-links">
+                    <a href="https://discord.com/users/1222963481192435753" target="_blank" data-title="@marix.btw">
+                        <img src="discord.png" alt="Discord">
+                    </a>
+                    <a href="https://namemc.com/profile/MariXBTW.2" target="_blank" data-title="MariXBTW">
+                        <img src="namemc.webp" alt="NameMC" style="border-radius: 5px;">
+                    </a>
+                    <a href="https://github.com/MariXOnCrack" target="_blank" data-title="MariXOnCrack">
+                        <img src="github.png" alt="Github">
+                    </a>
+                    <a href="https://www.youtube.com/@Marii_iiX" target="_blank" data-title="@Marii_iiX">
+                        <img src="youtube.png" alt="Youtube">
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div id="card2">
+                <img class="song-img" src="song-img.png">
+                <div class="musictitle">Big Dawgs</div>
+    
+                <div id="timer">0:00 / 0:00</div>
+                
+                <!-- Play/Pause Button using images -->
+                <img id="play-pause-btn" src="play-icon.png" alt="Play/Pause Button">
+                
+                <!-- Timeline Slider -->
+                <input type="range" id="timeline" min="0" max="100" value="0">
+    
+            </div>
+        </div>
+    </div>
+
+    <div id="time-display">
+        <div id="local-time"></div>
+        <div id="utc-time"></div>
+    </div>
+    <audio id="background-music" src="song.mp3" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+/* Style for the overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly transparent black */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+/* Style for the enter text */
+#enter-text {
+    color: white;
+    font-size: 28px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+/* Video background styling */
+#background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1; /* Make sure the video is behind other content */
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    opacity: 1; /* Optional: adjust the opacity if you want the video to be less visible */
+}
+
+/* Hide the bio content initially */
+#bio-content {
+    display: none;
+}
+
+/* Center Content Styling */
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 20px; /* Space between card and card2 */
+}
+
+/* Centered Card Styling */
+#card, #card2 {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    backdrop-filter: blur(12px); /* Apply blur effect */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#card {
+    height: 10em;
+}
+
+#card2 {
+    height: 6em;
+}
+
+/* Image Styling in Card */
+.pp {
+    width: 5em;
+    border-radius: 100%;
+    margin-right: 20em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.name {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2em;
+    margin-top: -2.6em;
+    margin-right: 3.6em;
+}
+
+.desc {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    text-align: left;
+    color: rgb(212, 212, 212);
+    margin-left: 6em;
+}
+
+/* Card 2 Specific Styling */
+.song-img {
+    width: 6em;
+    border-radius: 10%;
+    margin-right: 23em;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.musictitle {
+    font-size: 1em;
+    margin-top: -6em;
+    text-align: left;
+    margin-left: 7em;
+}
+
+#play-pause-btn {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-right: 16em;
+    position: absolute;
+    right: 5%;
+}
+
+/* Styles for the Timeline Slider */
+#timeline {
+    width: 60%;
+    margin-top: 2em;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.5);
+    height: 5px;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 12em;
+}
+
+#timeline::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+#timeline::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+
+#timer {
+    margin-top: 10px;
+    text-align: left;
+    margin-left: 7em;
+}
+
+.en {
+    height: 1.4em;
+    width: 2em;
+    border-radius: 5px;
+}
+
+.fr {
+    height: 1.4em;
+    width: 2em;
+    border-radius: 5px;
+}
+
+.nl {
+    height: 1.4em;
+    width: 2em;
+    border-radius: 5px;
+}
+
+.flags {
+    margin-top: -3.3em;
+    margin-left: 15em;
+}
+
+#time-display {
+    margin-top: -4em;
+    margin-left: 1em;
+    text-align: left;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    color: rgb(212, 212, 212);
+}
+
+#local-time, #utc-time {
+    margin-bottom: 5px;
+}
+
+/* New: Social Media Links Styling */
+#social-links {
+    margin-top: 4em;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#social-links a {
+    position: relative;
+    display: inline-block;
+}
+
+#social-links img {
+    width: 2.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Tooltip styling */
+#social-links a::after {
+    content: attr(data-title); /* Get the title from the data-title attribute */
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px); /* Center horizontally and offset slightly below */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: 'Roboto Mono', monospace;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    pointer-events: none; /* Prevents the tooltip from interfering with hover state */
+    z-index: 10;
+}
+
+/* Show the tooltip on hover */
+#social-links a:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(10%); /* Slide in smoothly from below */
+}
